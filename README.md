@@ -1,0 +1,1 @@
+Matlabs lack of threading meant that I needed a threaded sine wave generator class with un-interupted variable frequency/amplitude - this is that sine-wave generator! It's pretty rough and ready at the moment - frequency isn't the true frequency of the tone, it's just an indicator - the higher the frequency, the higher the pitch. 
