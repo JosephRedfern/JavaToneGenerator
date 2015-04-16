@@ -1,5 +1,4 @@
-import java.util.Scanner;
-import java.util.Arrays;
+//by Joseph Redfern
 import javax.sound.sampled.AudioFormat;
 import javax.sound.sampled.AudioSystem;
 import javax.sound.sampled.SourceDataLine;
@@ -42,11 +41,12 @@ public class Synth{
     }
 
     public void start(){
-        this.running = true;
-        this.runner = new Thread(new ToneGenerator(this));
-        this.runner.start();
+        if(!running){
+            running = true;
+            runner = new Thread(new ToneGenerator(this));
+            runner.start();
+        }
     }
-
 
     public boolean shouldRun(){
         return this.running;
